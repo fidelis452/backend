@@ -1,4 +1,4 @@
-POST http://localhost:5000/addpost
+POST https://fidelis-waweru.herokuapp.com/addpost
 Content-Type: application/json
 
 {
