@@ -1,0 +1,9 @@
+POST http://localhost:5000/addpost
+Content-Type: application/json
+
+{
+    "category": "fidelis",
+    "title": "fidelis",
+    "image": "fidelis@gmail.com",
+    "description": "fidelis"
+}
