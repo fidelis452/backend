@@ -7,6 +7,8 @@ const cors =  require("cors")
 const path = require('path');
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath)); 
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, './.env') });
 dotenv.config()
 
 mongoose.connect(process.env.DATABASE, () => 
