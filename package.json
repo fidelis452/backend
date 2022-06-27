@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "mern stack",
   "main": "server.js",
-  "engines": {
-    "node": "16.13.2",
-    "npm": "8.13.1"
-  },
+  
   "scripts": {
     "start": "node server.js"
   },
