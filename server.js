@@ -7,16 +7,11 @@ const cors =  require("cors")
 const path = require('path');
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath)); 
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, './.env') });
+
 dotenv.config()
 
-mongoose.connect(process.env.DATABASE, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
- }).then(()=> {
-     console.log("Database connected")
- }) 
+mongoose.connect("mongodb+srv://fidelis:fidelis@cluster0.nbay3.mongodb.net/mytable?retryWrites=true&w=majority", () => 
+console.log("Database connected"))
 
 //activate body parser
 app.use(express.json())
