@@ -11,8 +11,12 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, './.env') });
 dotenv.config()
 
-mongoose.connect(process.env.DATABASE, () => 
-console.log("Database connected"))
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+ }).then(()=> {
+     console.log("Database connected")
+ }) 
 
 //activate body parser
 app.use(express.json())
